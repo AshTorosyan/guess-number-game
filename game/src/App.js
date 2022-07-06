@@ -1,8 +1,10 @@
+import Wrapper from "./ui/Wrapper/Wrapper"
+
 const App = () => {
   return (
-    <section>
-
-    </section>
+    <Wrapper>
+      
+    </Wrapper>
   )
 }
 
