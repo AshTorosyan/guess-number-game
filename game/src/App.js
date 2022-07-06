@@ -30,6 +30,9 @@ const App = () => {
   return (
     <Wrapper>
       <Center className={classes.container}>
+        <Card>
+          <Text className={classes.slogan}>խաղա հաճույքի համար</Text>
+        </Card>
       <Card className={classes.card1}>
         <Text className={classes.balance_text}> Իմ հաշիվ  <span className={classes.balance_number}> {balance}</span> </Text>
       </Card>
@@ -47,8 +50,8 @@ const App = () => {
         <Button className={classes.play} onClick={onPlayHandler}> Խաղալ </Button>
         
        <Card className={classes.card4}>
-        <Text className={classes.text}> Computer Number  </Text>
-        <Text className={classes.text}> {computerNum} </Text>
+        <Text className={classes.comp_num}> Համակարգչի թիվը  </Text>
+        <Text className={classes.comp_num2}> {computerNum} </Text>
        </Card>
        </Center>
     </Wrapper>
