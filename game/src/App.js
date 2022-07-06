@@ -3,7 +3,9 @@ import Button from "./components/Button/Button";
 import Input from "./components/Input/Input";
 import Text from "./components/Text/Text";
 import Card from "./ui/Card/Card";
-import Wrapper from "./ui/Wrapper/Wrapper"
+import Wrapper from "./ui/Wrapper/Wrapper";
+import classes from "./Global.module.css";
+import Center from "./components/Center/Center";
 
 const App = () => {
   const [balance,setBalance] = useState(1000);
@@ -27,22 +29,30 @@ const App = () => {
 
   return (
     <Wrapper>
-      <Card>
-        <Text> your balance is {balance} </Text>
+      <Center className={classes.container}>
+      <Card className={classes.card1}>
+        <Text className={classes.balance_text}> Իմ հաշիվ  <span className={classes.balance_number}> {balance}</span> </Text>
       </Card>
-       <Card>
-        <Text> Coin </Text>
-        <Input  propsRef={coinRef} type='number' />
-        <Text> number you guess </Text>
-        <Input propsRef={guessNumRef} type='number' />
-        <Button onClick={onPlayHandler}> Play </Button>
+       <Card className={classes.card2}>
+        <Text className={classes.coin}> Խաղադրույք </Text>
+        <br></br>
+        <Input className={classes.coin_input} propsRef={coinRef} type='number' />
+        </Card>
+        <br></br>
+        <Card className={classes.card3}>
+        <Text className={classes.num_guess}> Իմ թիվը </Text>
+        <br></br>
+        <Input className={classes.num_guess_input} propsRef={guessNumRef} type='number' />
+        </Card>
+        <Button className={classes.play} onClick={onPlayHandler}> Խաղալ </Button>
+        
+       <Card className={classes.card4}>
+        <Text className={classes.text}> Computer Number  </Text>
+        <Text className={classes.text}> {computerNum} </Text>
        </Card>
-       <Card>
-        <Text> Computer Number  </Text>
-        <Text> {computerNum} </Text>
-       </Card>
+       </Center>
     </Wrapper>
-  )
+  );
 }
 
-export default App
+export default App;
