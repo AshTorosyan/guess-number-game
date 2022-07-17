@@ -11,7 +11,7 @@ const App = () => {
   const [balance,setBalance] = useState(1000);
   const [computerNum, setComputerNum] = useState('');
   const coinRef = useRef('');
-  const guessNumRef = useRef();
+  const guessNumRef = useRef('');
 
   const onPlayHandler = () => { 
     if(
@@ -22,7 +22,7 @@ const App = () => {
         setComputerNum(Math.ceil(Math.random()  * 10))
         setBalance(balance - Number(coinRef.current.value));
         if(guessNumRef.current.value == computerNum) {
-          setBalance( balance + (coinRef.current.value * 10))
+          setBalance( balance + (coinRef.current.value * 10));
         }
     }
   }
